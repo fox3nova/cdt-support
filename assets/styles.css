@@ -15,7 +15,7 @@
   --max: 1120px;
 }
 * { box-sizing: border-box; }
-html { min-height: 100%; background: var(--bg); }
+html { min-height: 100%; background: var(--bg); overflow-x: hidden; }
 body {
   margin: 0;
   min-height: 100%;
@@ -26,6 +26,7 @@ body {
     linear-gradient(180deg, #08111f 0%, #0b1422 42%, #08111f 100%);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", sans-serif;
   line-height: 1.55;
+  overflow-x: hidden;
 }
 a { color: inherit; }
 .site-header {
@@ -37,7 +38,7 @@ a { color: inherit; }
   backdrop-filter: blur(22px);
 }
 .nav {
-  width: min(var(--max), calc(100% - 32px));
+  width: min(var(--max), calc(100vw - 32px));
   margin: 0 auto;
   min-height: 72px;
   display: flex;
@@ -59,7 +60,7 @@ a { color: inherit; }
   border-radius: 7px;
 }
 .nav-links a:hover { color: var(--ink); background: rgba(148, 163, 184, .12); }
-main { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+main { width: min(var(--max), calc(100vw - 32px)); margin: 0 auto; }
 .hero {
   min-height: 650px;
   position: relative;
@@ -204,6 +205,19 @@ main { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
     linear-gradient(90deg, rgba(8,17,31,.96), rgba(8,17,31,.55) 48%, rgba(8,17,31,.92)),
     linear-gradient(180deg, rgba(13,24,39,.8), rgba(3,7,13,.98));
 }
+.showcase-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
 .hero-screenshot {
   position: absolute;
   margin: 0;
@@ -273,6 +287,7 @@ h1 { font-size: clamp(58px, 10vw, 118px); line-height: .9; margin: 12px 0 18px; 
   font-weight: 800;
   text-decoration: none;
   border: 1px solid transparent;
+  white-space: normal;
 }
 .button.primary { background: var(--teal); color: #061018; }
 .button.secondary { color: var(--ink); border-color: rgba(148, 163, 184, .28); background: rgba(18,31,49,.76); }
@@ -283,6 +298,7 @@ h1 { font-size: clamp(58px, 10vw, 118px); line-height: .9; margin: 12px 0 18px; 
 }
 .section { padding: 52px 0; border-top: 1px solid rgba(148, 163, 184, .14); }
 .section h2 { font-size: clamp(30px, 4vw, 48px); line-height: 1.04; margin: 8px 0 14px; letter-spacing: 0; }
+.section h2 { max-width: 100%; }
 .section p { color: var(--muted); margin: 0; }
 .download-band {
   display: grid;
@@ -290,6 +306,7 @@ h1 { font-size: clamp(58px, 10vw, 118px); line-height: .9; margin: 12px 0 18px; 
   gap: 30px;
   align-items: center;
 }
+.download-band > * { min-width: 0; }
 .download-panel {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr);
@@ -333,6 +350,26 @@ h1 { font-size: clamp(58px, 10vw, 118px); line-height: .9; margin: 12px 0 18px; 
 .feature p { font-size: 15px; }
 .rich-features { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .screenshot-story .section-head { max-width: 790px; }
+.showcase-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 18px 42px rgba(0,0,0,.22);
+}
+.showcase-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.showcase-card figcaption {
+  padding: 15px 18px 17px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 650;
+  border-top: 1px solid rgba(148,163,184,.14);
+}
 .screenshot-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
@@ -412,6 +449,7 @@ td { color: var(--muted); }
   .device-row { right: 28px; bottom: 28px; transform: scale(.82); transform-origin: bottom right; }
   .product-hero { min-height: 820px; }
   .actual-media { inset: 300px 0 26px; }
+  .showcase-media { padding: 10px; }
   .hero-ipad { width: calc(100% - 34px); right: 17px; bottom: 24px; }
   .hero-watch { right: 34px; bottom: 34px; width: 140px; height: 170px; }
   .intro-band, .split, .download-band { grid-template-columns: 1fr; }
@@ -431,6 +469,7 @@ td { color: var(--muted); }
   .device-row { right: -8px; bottom: 12px; transform: scale(.58); }
   .product-hero { min-height: 790px; }
   .actual-media { inset: 390px 0 24px; }
+  .showcase-media img { object-position: 42% center; }
   .hero-ipad { width: 125%; right: -44%; bottom: 18px; }
   .hero-watch { left: 18px; right: auto; bottom: 34px; width: 116px; height: 142px; border-radius: 26px; }
   .radar-panel { display: none; }
@@ -438,5 +477,7 @@ td { color: var(--muted); }
   .download-panel { grid-template-columns: 54px minmax(0, 1fr); padding: 16px; }
   .download-panel img { width: 54px; height: 54px; border-radius: 12px; }
   .screenshot-grid img { max-height: 520px; }
+  .section h2 { font-size: 24px; line-height: 1.12; overflow-wrap: anywhere; max-width: 330px; }
+  .section p { max-width: 330px; }
   .footer-inner { flex-direction: column; }
 }
