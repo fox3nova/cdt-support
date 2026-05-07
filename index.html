@@ -6,17 +6,18 @@
   <meta name="theme-color" content="#08111f">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" href="assets/cdt_icon_dark.png">
-  <title>CDT - Crew Duty Time Calculator</title>
-  <meta name="description" content="CDT is a crew duty, rest, flight-time, LBO, iPhone, Apple Watch, and Live Activity reference calculator for flight crew.">
+  <title>Crew Duty Time - CDT</title>
+  <meta name="description" content="Crew Duty Time is a crew duty, rest, flight-time, LBO, Dynamic Island, Apple Watch, and no-subscription reference calculator for flight crew.">
 </head>
 <body>
 <header class="site-header">
   <nav class="nav" aria-label="Main navigation">
     <a class="brand" href="./">
       <img src="./assets/cdt_icon_dark.png" alt="CDT app icon">
-      <span><span class="brand-name">CDT</span><span class="brand-sub">Crew duty time calculator</span></span>
+      <span><span class="brand-name">Crew Duty Time</span><span class="brand-sub">CDT flight crew calculator</span></span>
     </a>
     <div class="nav-links">
+      <a href="#download">iOS Download</a>
       <a href="./guide/">Guide</a>
       <a href="./releases/">Release Notes</a>
       <a href="./support/">Support</a>
@@ -25,76 +26,114 @@
   </nav>
 </header>
 <main>
-  <section class="hero">
-    <div class="hero-media" aria-hidden="true">
-      <div class="flight-deck">
-        <div class="radar-panel">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="device-row">
-          <div class="phone-frame">
-            <div class="device-screen">
-              <div class="screen-bar"><span>10:09</span><strong>CDT</strong><span>•••</span></div>
-              <div class="route-card">
-                <strong>TPE</strong><span>LOCAL TIME</span><strong>HKG</strong>
-              </div>
-              <div class="status-pair">
-                <div><span>DUTY</span><strong class="ok">LEGAL</strong></div>
-                <div><span>LBO</span><strong class="warn">CAUT</strong></div>
-                <div><span>REST</span><strong class="ok">OK</strong></div>
-                <div><span>WATCH</span><strong class="info">SYNC</strong></div>
-              </div>
-              <div class="timeline"><span></span></div>
-            </div>
-          </div>
-          <div class="watch-frame">
-            <div class="watch-screen">
-              <strong>CDT</strong>
-              <span>DUTY LEGAL</span>
-              <span>LBO CAUT</span>
-              <span>REST OK</span>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="hero product-hero">
+    <div class="hero-media actual-media" aria-label="Crew Duty Time app screenshots">
+      <figure class="hero-screenshot hero-ipad">
+        <img src="./assets/cdt-ipad-main.png" alt="Crew Duty Time iPad duty planning screen">
+      </figure>
+      <figure class="hero-screenshot hero-watch">
+        <img src="./assets/cdt-watch-route.png" alt="Crew Duty Time Apple Watch route screen">
+      </figure>
     </div>
     <div class="hero-copy">
       <div class="kicker">Flight crew duty reference</div>
-      <h1>CDT</h1>
-      <p class="lede">A focused duty, rest, flight-time, and LBO calculator for short-term crew planning on iPhone and Apple Watch.</p>
+      <h1>Crew Duty Time</h1>
+      <p class="lede">A focused iOS calculator for crew duty, rest, flight time, LBO, next-duty planning, Dynamic Island visibility, and Apple Watch time entry.</p>
       <div class="actions">
-        <a class="button primary" href="guide/">Read the guide</a>
-        <a class="button secondary" href="releases/">View release notes</a>
+        <a class="button primary" href="#download">iOS download</a>
+        <a class="button secondary" href="./guide/">Read the guide</a>
       </div>
+      <div class="trust-row" aria-label="Product highlights">
+        <span>No subscription</span>
+        <span>Local calculations</span>
+        <span>iPhone, iPad, Watch</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section download-band">
+    <div>
+      <span class="kicker">iOS download</span>
+      <h2>Built for iPhone, iPad, Apple Watch, and visible duty status.</h2>
+      <p>Crew Duty Time is prepared as a paid, no-subscription App Store release. The public App Store download link will be added here as soon as Apple approval makes the listing available.</p>
+    </div>
+    <div class="download-panel">
+      <img src="./assets/cdt_icon_dark.png" alt="CDT app icon">
+      <div>
+        <strong>Crew Duty Time</strong>
+        <span>One-time purchase. No subscription fee.</span>
+      </div>
+      <a class="button primary disabled" href="./releases/" aria-disabled="true">App Store link pending</a>
     </div>
   </section>
 
   <section class="section intro-band">
     <div>
-      <h2>Built for crew workflow</h2>
-      <p>CDT keeps route timing, company-style settings, rest references, rolling flight time, duty-stage reminders, and Watch snapshots in one local-first planning tool.</p>
+      <span class="kicker">Why CDT exists</span>
+      <h2>Duty planning without spreadsheet friction.</h2>
+      <p>CDT keeps route timing, report assumptions, rest references, rolling flight time, LBO, cabin references, and next-duty checks in one local-first workflow for short-term crew planning.</p>
     </div>
     <div class="metric-strip">
       <div><span>Route</span><strong>STD / STA / ACT</strong></div>
       <div><span>Limits</span><strong>Duty / FT / Rest</strong></div>
-      <div><span>Surfaces</span><strong>iPhone / Watch / Live</strong></div>
+      <div><span>Surfaces</span><strong>Dynamic Island / Watch</strong></div>
+    </div>
+  </section>
+
+  <section class="section screenshot-story">
+    <div class="section-head">
+      <span class="kicker">Real app workflow</span>
+      <h2>From route setup to next legal report.</h2>
+      <p>Use planned times before duty, then enter actual OUT and IN values as the operation changes. CDT refreshes duty, flight-time, rest, LBO, and next-duty references from the same route timeline.</p>
+    </div>
+    <div class="screenshot-grid">
+      <figure class="screen-large">
+        <img src="./assets/cdt-ipad-main.png" alt="Crew Duty Time route duty planning on iPad">
+        <figcaption>Route timing, report reference, duty limit, LBO, and next-duty planner in one operational view.</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/cdt-ipad-next-duty.png" alt="Crew Duty Time next duty planner screen">
+        <figcaption>Next-duty checks help estimate the earliest legal report after rest.</figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/cdt-watch-entry.png" alt="Crew Duty Time Apple Watch time entry">
+        <figcaption>Apple Watch companion views support quick leg review and time entry.</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="section">
     <div class="section-head">
-      <span class="kicker">Core workflow</span>
-      <h2>Plan, monitor, and verify.</h2>
+      <span class="kicker">Core features</span>
+      <h2>Made for repeated crew checks, not marketing demos.</h2>
     </div>
-    <div class="feature-grid">
-      <article class="feature"><span class="feature-icon">01</span><h3>Route-based duty planning</h3><p>Enter route sectors with STD, STA, planned flight time, ACT OUT, and ACT IN to review duty and flight-time status.</p></article>
-      <article class="feature"><span class="feature-icon">02</span><h3>Configurable settings</h3><p>Adjust report time, taxi time, duty limits, flight-time limits, LBO, rest, and related company-style planning values.</p></article>
-      <article class="feature"><span class="feature-icon">03</span><h3>Reminder surfaces</h3><p>Use Live Activity, local notifications, and Apple Watch companion snapshots to keep key duty milestones visible.</p></article>
-      <article class="feature"><span class="feature-icon">04</span><h3>Rest and LBO reference</h3><p>Review short-term rest, in-flight rest planning, LBO timing, and rolling 24-hour flight-time references in context.</p></article>
+    <div class="feature-grid rich-features">
+      <article class="feature"><span class="feature-icon">01</span><h3>Route-based duty planning</h3><p>Enter sectors with STD, STA, planned flight time, ACT OUT, and ACT IN to review duty and flight-time status.</p></article>
+      <article class="feature"><span class="feature-icon">02</span><h3>Company-style settings</h3><p>Adjust report time, taxi time, maximum flight time, maximum FDT, LBO, rest, cabin reference values, and related planning limits.</p></article>
+      <article class="feature"><span class="feature-icon">03</span><h3>Dynamic Island and Live Activity</h3><p>Keep current duty-stage context visible on supported iPhone models, including REPORT, STD, DLY, and LBO stages before ACT OUT is entered.</p></article>
+      <article class="feature"><span class="feature-icon">04</span><h3>Apple Watch companion</h3><p>Review the active duty snapshot from the wrist and enter time values without digging through the full iPhone screen.</p></article>
+      <article class="feature"><span class="feature-icon">05</span><h3>Rest and LBO reference</h3><p>Check short-term rest, in-flight rest planning, LBO timing, multi-crew and double-crew planning references.</p></article>
+      <article class="feature"><span class="feature-icon">06</span><h3>Rolling flight-time reference</h3><p>Review rolling 24-hour flight-time values for short-term awareness during a sequence.</p></article>
+      <article class="feature"><span class="feature-icon">07</span><h3>Local-first privacy</h3><p>No account sign-in is required. Core calculations are processed locally on device, with no data collection for the App Store privacy label.</p></article>
+      <article class="feature"><span class="feature-icon">08</span><h3>No subscription fee</h3><p>CDT is positioned as a straightforward paid tool, without ads, recurring subscription pressure, or cloud-account lock-in.</p></article>
     </div>
   </section>
 
   <section class="section split">
+    <div>
+      <span class="kicker">Updates and manuals</span>
+      <h2>Release notes and operating guidance stay with the product.</h2>
+    </div>
+    <div class="text-stack">
+      <p>The guide page carries practical usage instructions and a downloadable PDF manual. The release notes page is reserved for version-by-version details, compatibility notes, and behavior changes that are too detailed for the App Store "What's New" field.</p>
+      <div class="actions">
+        <a class="button secondary" href="./guide/">Open user guide</a>
+        <a class="button secondary" href="./releases/">Open release notes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split boundary-band">
     <div>
       <span class="kicker">Important boundary</span>
       <h2>A planning reference, not an official approval system.</h2>
@@ -104,7 +143,7 @@
 </main>
 <footer class="site-footer">
   <div class="footer-inner">
-    <span>CDT is a planning and reference calculator for flight crew.</span>
+    <span>Crew Duty Time is a planning and reference calculator for flight crew.</span>
     <span><a href="./guide/">User Guide</a> · <a href="./releases/">Release Notes</a> · <a href="./support/">Support</a> · <a href="./privacy/">Privacy</a></span>
   </div>
 </footer>
